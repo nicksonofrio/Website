@@ -3,7 +3,8 @@ import React from 'react';
 import Navbar from './components/Navbar';
 import {BrowserRouter as Router, Switch, Route} from 'react-router-dom';
 import Home from './components/pages/Home';
-import {withAuthenticator, AmplifySignOut} from '@aws-amplify/ui-react'
+import {withAuthenticator, AmplifySignOut} from '@aws-amplify/ui-react';
+import {API, Storage} from 'aws-amplify';
 
 function App() {
   return (
@@ -17,6 +18,8 @@ function App() {
           
         </Switch>
       </Router>
+      
+      
       <AmplifySignOut />
     </div>
   );
